@@ -1,0 +1,19 @@
+package com.ArrayPracticeQuestions;
+
+public class MissingElements {
+
+	public static void main(String[] args) {
+
+		int[] arr = { 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 };
+		int lastNo = 0;
+		int sum = 0;
+
+		for (int i = 0; i <= arr.length - 1; i++) {
+			lastNo = arr[i];
+			sum = sum + arr[i];
+		}
+		int total = lastNo * (lastNo + 1) / 2;
+		int missing = total - sum;
+		System.out.println(missing);
+	}
+}
